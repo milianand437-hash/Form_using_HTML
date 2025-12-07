@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit.php" method="post">
+        <fieldset>
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="fullname"
+        placeholder="Enter your name"><br><br><!--Whatever we r writing in id should be same as for but name need not to be same as for-->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+        placeholder="Enter your email"><br><br>
+        <label for="age">Age:</label>
+        <input type="number" name="age" min="1" max="100"><br><br>
+        <input type="password" namr="pwd" placeholder="Enter your password" style="width:200px;height:200px;""><br><br><!--use style attribute (It is a CSS tag) to specify the stlye of the textfield-->
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female<br><br><!--if we write different word in the name then we can select both the options simultaneously becasue name is attaining 2 different information-->
+        <input type="checkbox" name="subscribe">Subscribe to newsletter<br><br>
+        <input type="checkbox" name="subscribe">Okay<br><br>
+        <input type="submit" name="submit">
+        <textarea name="message" rows="4" cols="50">Defualt text inside textarea</textarea><!--textarea is for large text and textfield is for smaller text-->
+        <!--we can also use placeholder attribute inside the opening of textarea tag but dont write anything in between opening and closing of textarea-->
+        <button type="submit">Submit form</button><br><br><!--another tag to create button-->
+        <button type="reset">Reset</button><!--we can create this with input type also--><!--when we click on this button then information will be deleted and we can enter fresh information-->
+        <button type="button" onclick="alert('Urgent action needed!')">Click</button><!--alert will create the alert window and custom action will be shown in the alert window-->
+        <select name="country" id="country">
+            <option value=""disabled>Select a country</option><!--no data will be sent to the server if we click on select a country because no value is given-->
+            <!--select a country will be disabled in the output but if we write selected disabled ,select a country will be displayed in the output but we cant seleect that option-->
+            <option value="india">India</option>
+            <option value="usa" selected>USA</option>
+            <option value="uk">UK</option>
+            <option value="australia">Australia</option>
+        </select><br><br> <!--select tag is used for making dropdown box--><!--option tag will display the options in the output-->
+        <!--if we select lets say australia but the value sent to server will not be australia but the value written in the value="australia"-->
+        <!--example - if in the openeing and closing of the option tag we write america but in value we write usa then value sent to server is usa-->
+        <!--if we write selected with the value then that option will be displayed first but if we dont write selected then the option which is the first one will be displayed first-->
+        <select name="skills" multiple size="4"><!--multiple attribute allows us to select multiple options in the dropdown box-->
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">Javascript</option>
+            <option value="python">Python</option>
+        </select><br><br>
+        <select name="books" multiple size="4">
+            <option value="Maths">Maths</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="English">English</option>
+        </select><br><br>
+        <label for="resume">Select a file</label>
+        <input type="file" id="resume" name="resume"><br><br><!--This is to upload a file-->
+        <input type="file" accept = ".jpg,.png,.pdf" multiple max="2"><!--This to restrict the type of file that should be uploaded.here we can select multiple files beacause we have used multiple attribute.IF we use max ,then whatever will be the value of max , that much files can be uploaded-->
+        </fieldset><!--it will enclose the form in a box-->
+
+    </form>
+</body>
+</html>
